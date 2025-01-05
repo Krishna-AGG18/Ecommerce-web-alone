@@ -19,6 +19,10 @@ body{
     gap: .8rem;
     font-size: 2rem;
 }
+.nav-item2{
+    gap: 2rem;
+    font-size: 1rem;
+}
 .navbar-2{
     display: flex;
     justify-content: space-between;
@@ -29,7 +33,14 @@ body{
 .nav-item21{
     display: flex;
     align-items: center;
-    gap: 1.5rem;
+    gap: 2rem;
+}
+.nav-item21 div{
+    padding: 5px;
+    border-radius: 50%;
+}
+.nav-item21 div:hover{
+    background-color: rgb(49, 49, 49);
 }
 .mode{
     display: flex;
@@ -62,6 +73,7 @@ body{
     left: 20px;
 }
 .slide-container{
+    box-sizing: border-box;
     width: 100vw;
     border: 2px solid red;
     height: 50vh;

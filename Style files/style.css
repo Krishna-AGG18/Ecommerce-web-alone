@@ -1,73 +1,115 @@
-*{
+@import url('https://fonts.googleapis.com/css2?family=Anton&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Protest+Revolution&family=Roboto&display=swap');
+
+* {
     margin: 0;
     padding: 0;
 }
-body{
+
+body {
     background-color: black;
     color: white;
+    font-family: "Poppins", serif;
 }
-.navbar{
+
+.navbar {
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 0px 20px;
-    border: 2px solid black;
+    font-weight: 700;
 }
-.nav-item1,.nav-item2{
+
+.nav-item1,
+.nav-item2 {
     display: flex;
     align-items: center;
     gap: .8rem;
-    font-size: 2rem;
+    font-size: 1.5rem;
 }
-.nav-item2{
+
+.nav-item2 {
     gap: 2rem;
     font-size: 1rem;
 }
-.nav-item2 div{
+
+.nav-item2 div {
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    gap: 1rem;
+    gap: .5rem;
     height: auto;
+    font-size: .8rem;
     /* padding: 20px; */
     padding-top: 30px;
     cursor: pointer;
+    box-sizing: border-box;
+    border: 2px solid black;
 }
-.nav-item2 div p{
+
+.nav-item2 div p {
     opacity: 0;
-    transition: opacity .8s ease-in-out;
+    transition: all .8s ease-in-out;
 }
-.nav-item2 div:hover p{
+.nav-item2 div:hover{
+    border-bottom: 2px solid darkorchid;
+}
+.nav-item2 div:hover p {
     cursor: pointer;
     opacity: 1;
 }
-.navbar-2{
+
+.navbar-2 {
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 0px 20px;
-    border: 2px solid black;
+    font-weight: 700;
 }
-.nav-item21{
+
+.nav-item21 {
     display: flex;
     align-items: center;
-    gap: 2rem;
+    gap: 1rem;
 }
 .nav-item21 div{
-    padding: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    font-size: .8rem;
+    /* gap: .2rem; */
+    transition: all .5s ease-in-out;
+    cursor: pointer;
+    border-bottom: 2px solid black;
+}
+.nav-item21 div i{
     border-radius: 50%;
+    box-sizing: border-box;
+    transition: all .5s ease-in-out;
+    padding: 5px;
+}
+.nav-item21 div p{
+    opacity: 0;
+    transition: all .5s ease-in-out;
 }
 .nav-item21 div:hover{
-    background-color: rgb(49, 49, 49);
+    border-bottom: 2px solid darkorchid;
 }
-.mode{
+.nav-item21 div:hover i{
+    background-color: #262626;
+}
+.nav-item21 div:hover p{
+    opacity: 1;
+}
+.mode {
     display: flex;
     align-items: center;
     gap: 1rem;
     justify-content: center;
 }
-.nav-item22{
+
+.nav-item22 {
     background-color: red;
     width: 2.5rem;
     border-radius: 20px;
@@ -78,7 +120,7 @@ body{
     height: 1rem;
 }
 
-.circle{
+.circle {
     width: 9px;
     height: 9px;
     background: white;
@@ -88,16 +130,19 @@ body{
     position: relative;
     transition: left .5s ease-in-out;
 }
-.circle:hover{
+
+.circle:hover {
     left: 20px;
 }
-.slide-container{
+
+.slide-container {
     box-sizing: border-box;
     width: 100vw;
-    border: 2px solid red;
+    /* border: 2px solid red; */
     height: 50vh;
 }
-.sliding-images{
+
+.sliding-images {
     width: 100%;
     height: 50vh;
 }

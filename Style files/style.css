@@ -2,6 +2,10 @@
     margin: 0;
     padding: 0;
 }
+body{
+    background-color: black;
+    color: white;
+}
 .navbar{
     display: flex;
     justify-content: space-between;
@@ -9,12 +13,46 @@
     padding: 10px 20px;
     border: 2px solid black;
 }
+.nav-item1,.nav-item2{
+    display: flex;
+    align-items: center;
+    gap: .8rem;
+    font-size: 2rem;
+}
 .navbar-2{
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 10px 20px;
+    padding: 0px 20px;
     border: 2px solid black;
+}
+.nav-item21{
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+}
+.mode{
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    justify-content: center;
+}
+.nav-item22{
+    background-color: red;
+    width: 2.5rem;
+    border-radius: 20px;
+    padding: 5px 5px;
+    display: flex;
+    align-items: center;
+    height: 1rem;
+}
+
+.circle{
+    width: 9px;
+    height: 9px;
+    background: white;
+    padding: 5px;
+    border-radius: 50%;
 }
 .slide-container{
     width: 100vw;

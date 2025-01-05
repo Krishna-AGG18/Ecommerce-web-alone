@@ -44,6 +44,7 @@ body{
     padding: 5px 5px;
     display: flex;
     align-items: center;
+    /* cursor: pointer; */
     height: 1rem;
 }
 
@@ -53,6 +54,12 @@ body{
     background: white;
     padding: 5px;
     border-radius: 50%;
+    left: 0;
+    position: relative;
+    transition: left .5s ease-in-out;
+}
+.circle:hover{
+    left: 20px;
 }
 .slide-container{
     width: 100vw;

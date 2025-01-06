@@ -19,13 +19,15 @@ body {
     padding: 0px 20px;
     font-weight: 700;
 }
-
+#logo{
+    border-radius: 50%;
+    width: 90px;
+}
 .nav-item1,
 .nav-item2 {
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: .8rem;
 }
 .nav-name{
     display: flex;
@@ -43,7 +45,7 @@ body {
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    gap: .5rem;
+    gap: .6rem;
     height: auto;
     font-size: .8rem;
     /* padding: 20px; */

@@ -9,6 +9,7 @@
 body {
     background-color: black;
     color: white;
+    overflow-x: hidden;
     font-family: "Poppins", serif;
 }
 
@@ -56,8 +57,8 @@ body {
 }
 .contact-open, .github, .linkedin, .insta{
     display: none !important;
+    transition: all 1s ease-in-out !important;
 }
-
 .nav-item2 div p {
     opacity: 0;
     transition: all .8s ease-in-out;
@@ -145,11 +146,17 @@ body {
 .circle:hover {
     left: 20px;
 }
-
+/*for hover*/
+.none{
+    display: none !important;
+}
+.block{
+    display: flex !important;
+}
 .slide-container {
     box-sizing: border-box;
     width: 100vw;
-    height: 50vh;
+    height: 75vh;
     overflow: hidden; /* Ensures no overflow outside the container */
 }
 
@@ -175,4 +182,64 @@ body {
     height: 100%; /* Ensures images fill the height */
     object-fit: cover; /* Fills container and crops excess parts */
     border-radius: 8px; /* Adds rounded corners */
+}
+.page-links{
+    display: flex;
+    padding: 1rem;
+    margin-top: 1rem;
+    justify-content: space-between;
+    color: gray;
+    border-block: 2px solid darkorchid;
+    box-sizing: border-box;
+}
+.page-links div{
+    box-sizing: border-box;
+    border-bottom: 2px solid black;
+    cursor: pointer;
+    transition: all .5s ease-in-out;
+}
+.page-links div:hover{
+    color: white;
+    /* text-decoration: underline; */
+    border-bottom: 2px solid darkorchid;
+}
+
+.showoff{
+    display: flex;
+    justify-content: center;
+    position: relative;
+    padding: 1rem 2rem;
+    
+}
+.showoff img{
+    height: auto;
+    width: 70%;
+    position: relative;
+    /* border-radius: 8px; */
+    box-shadow: 0px 4px 8px 0px rgba(255,255,255,0.8);
+}
+.showoff p{
+    position: absolute;
+    font-size: 3rem;
+    font-family: cursive;
+    font-weight: bolder;
+    width: 40%;
+    top: 4rem;
+    text-align: center;
+}
+.redirector{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    box-sizing:border-box;
+    padding: 1rem 0px;
+}
+.redirector img{
+    width: 40%;
+    height: auto;
+    cursor: pointer;
+}
+.recommended{
+    padding: 2rem 1rem ;
+    display: grid;
 }

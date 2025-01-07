@@ -196,6 +196,7 @@ body {
     box-sizing: border-box;
     border-bottom: 2px solid black;
     cursor: pointer;
+    font-weight: 600;
     transition: all .5s ease-in-out;
 }
 .page-links div:hover{
@@ -209,6 +210,7 @@ body {
     justify-content: center;
     position: relative;
     padding: 1rem 2rem;
+    margin-block: 2rem;
     
 }
 .showoff img{
@@ -216,6 +218,9 @@ body {
     width: 70%;
     position: relative;
     /* border-radius: 8px; */
+    cursor: pointer;
+}
+.showoff img:hover{
     box-shadow: 0px 4px 8px 0px rgba(255,255,255,0.8);
 }
 .showoff p{
@@ -237,9 +242,63 @@ body {
 .redirector img{
     width: 40%;
     height: auto;
+    cursor: pointer;    
+}
+.redirector img:hover{
+    box-shadow: 0px 4px 8px 0px rgba(255,255,255,0.8);
+    }
+.recommended{
+    margin-block: 2rem;
+    padding: 0rem 2rem ;
+    display: grid;
+    position: relative;
+}
+.recommended .items{
+    display: flex;
+    align-items: center;
+}
+.recommended .items .card,
+.recommended .items .card .info{
+    display: flex;
+    /* align-items: center; */
+    justify-content: center;
+    flex-direction: column;
+}
+.recommended .items .card{
+    margin-top: 1rem;
+    width: 326px;   
+    padding: .5rem;
+    height: 537px;
+
+}
+.recommended .items .card .image{
+    width: 100%;
+    height: 77%;
+    overflow: hidden;
+    /* height: 326px; */
+}
+.recommended .items .card .image img{
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+.info{
+    padding-top: 1rem;
+}
+.left,.right{
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1rem 1.5rem;
+    background-color: rgba(0,0,0,0.3);
+    border-radius: 50%;
     cursor: pointer;
 }
-.recommended{
-    padding: 2rem 1rem ;
-    display: grid;
+.right{
+    right: 0px;
+}
+
+.left:hover , .right:hover{
+    background-color: rgba(0,0,0,0.8);
 }

@@ -156,7 +156,7 @@ body {
 .slide-container {
     box-sizing: border-box;
     width: 100vw;
-    height: 75vh;
+    height: 75vmin;
     overflow: hidden; /* Ensures no overflow outside the container */
 }
 

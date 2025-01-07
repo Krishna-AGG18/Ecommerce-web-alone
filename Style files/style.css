@@ -292,10 +292,11 @@ body {
     object-fit: cover;
     border-radius: 10px;
 }
-.desc{
-    display: flex;
-    overflow: hidden;
-    text-overflow: ellipsis;
+.name{
+    font-weight: 700;
+}
+.rate{
+    color: green;
 }
 .info{
     padding-top: 1rem;

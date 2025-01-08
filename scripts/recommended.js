@@ -93,6 +93,7 @@ let content_recomm = [
 ];
 
 let recommended = document.querySelector(".recommended .items");
+let best_seller = document.querySelector(".best-seller-items")
 // let recomm_html = recommended.innerHTML;
 
 strii = "";
@@ -110,4 +111,5 @@ content_recomm.forEach((card, index) => {
             </div>
     `
 });
+best_seller.innerHTML = strii;
 recommended.innerHTML= strii;

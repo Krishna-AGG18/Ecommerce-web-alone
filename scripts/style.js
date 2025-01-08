@@ -39,3 +39,34 @@ right.addEventListener("click",()=>{
     counter++;
     slideDiv();
 })
+
+//for bestseller
+let bestsellercards = document.querySelectorAll(".best-seller-items .card")
+let bestLeft = document.querySelector(".best-left")
+let bestright = document.querySelector(".best-right")
+let bestCount = 0
+
+bestsellercards.forEach((cards,index)=>{
+    cards.style.left = `${index*326}px`;
+})
+
+const slideCard = ()=>{
+    if(counter<0)
+        counter = 0;
+    else if(counter> bestsellercards.length-1)
+        counter = bestsellercards.length-1;
+
+    bestsellercards.forEach((card)=>{
+        card.style.transform = `translateX(-${counter*326}px)`;
+    })
+}
+
+bestLeft.addEventListener("click",()=>{
+    counter--;
+    slideCard();
+})
+
+bestright.addEventListener("click",()=>{
+    counter++;
+    slideCard();
+})

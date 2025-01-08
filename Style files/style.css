@@ -109,24 +109,20 @@ body {
     flex-direction: column;
     font-size: 1.5vw;
     /* gap: .2rem; */
-    transition: all .5s ease-in-out;
+    color: gray;
+    transition: all .1s ease-in-out;
     cursor: pointer;
     border-bottom: 2px solid black;
 }
 
 .nav-item21 div p{
-    /* opacity: 0; */
     transition: all .5s ease-in-out;
 }
-.nav-item21 div:hover{
+.nav-item21 div:hover {
+    color: white;
     border-bottom: 2px solid darkorchid;
 }
-.nav-item21 div:hover i{
-    background-color: #262626;
-}
-.nav-item21 div:hover p{
-    opacity: 1;
-}
+
 /*.slide-container {
     box-sizing: border-box;
     width: 100vw;

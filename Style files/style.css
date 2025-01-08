@@ -376,7 +376,7 @@ body {
     gap: 15px;
     justify-content: center;
     align-content: center;
-    padding: 1rem 1rem 1rem 0rem;
+    padding: 1rem 1rem 1rem 1rem;
     box-sizing: border-box; /* Ensures padding doesn't overflow */
 }
 

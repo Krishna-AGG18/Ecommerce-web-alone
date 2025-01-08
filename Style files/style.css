@@ -74,10 +74,7 @@ body {
     box-sizing: border-box;
     border: 2px solid black;
 }
-.contact-open, .github, .linkedin, .insta{
-    display: none !important;
-    transition: all 1s ease-in-out !important;
-}
+
 .nav-item2 div p {
     opacity: 0;
     transition: all .8s ease-in-out;
@@ -90,7 +87,7 @@ body {
     opacity: 1;
 }
 
-.navbar-2 {
+/* .navbar-2 {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -98,7 +95,7 @@ body {
     font-weight: 700;
     overflow: hidden;
 
-}
+} */
 
 .nav-item21 {
     display: flex;
@@ -110,20 +107,15 @@ body {
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    font-size: .8rem;
+    font-size: 1.5vw;
     /* gap: .2rem; */
     transition: all .5s ease-in-out;
     cursor: pointer;
     border-bottom: 2px solid black;
 }
-.nav-item21 div i{
-    border-radius: 50%;
-    box-sizing: border-box;
-    transition: all .5s ease-in-out;
-    padding: 5px;
-}
+
 .nav-item21 div p{
-    opacity: 0;
+    /* opacity: 0; */
     transition: all .5s ease-in-out;
 }
 .nav-item21 div:hover{
@@ -135,45 +127,11 @@ body {
 .nav-item21 div:hover p{
     opacity: 1;
 }
-.mode {
-    display: flex;
-    align-items: center;
-    gap: 1rem;
-    justify-content: center;
-}
-
-.nav-item22 {
-    background-color: red;
-    width: 2.5rem;
-    border-radius: 20px;
-    padding: 5px 5px;
-    display: flex;
-    align-items: center;
-    /* cursor: pointer; */
-    height: 1rem;
-}
-
-.circle {
-    width: 9px;
-    height: 9px;
-    background: white;
-    padding: 5px;
-    border-radius: 50%;
-    left: 0;
-    position: relative;
-    transition: left .5s ease-in-out;
-}
-
-.circle:hover {
-    left: 20px;
-}
-
-.slide-container {
+/*.slide-container {
     box-sizing: border-box;
     width: 100vw;
     height: 75vmin;
-    overflow: hidden; /* Ensures no overflow outside the container */
-}
+    overflow: hidden; /* Ensures no overflow outside the container} */
 
 .sliding-images {
     width: 100%;
@@ -297,6 +255,7 @@ body {
     /* align-items: center; */
     /* justify-content: center; */
     flex-direction: column;
+    cursor: pointer;
 }
 .recommended .items .card{
     position: absolute;

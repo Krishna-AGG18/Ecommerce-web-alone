@@ -229,7 +229,7 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vmin;  /* Full viewport height to center vertically */
+    height: 50vmin;  /* Full viewport height to center vertically */
     width: 100vw;  /* Full viewport width */
 }
 

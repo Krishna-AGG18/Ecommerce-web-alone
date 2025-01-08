@@ -167,13 +167,7 @@ body {
 .circle:hover {
     left: 20px;
 }
-/*for hover*/
-.none{
-    display: none !important;
-}
-.block{
-    display: flex !important;
-}
+
 .slide-container {
     box-sizing: border-box;
     width: 100vw;
@@ -199,10 +193,10 @@ body {
 }
 
 .sliding-images img {
-    width: auto; /* Allows width to adjust proportionally */
-    height: 100%; /* Ensures images fill the height */
-    object-fit: cover; /* Fills container and crops excess parts */
-    border-radius: 8px; /* Adds rounded corners */
+    width: auto; 
+    height: 100%; 
+    object-fit: cover; 
+    border-radius: 8px; 
 }
 .page-links{
     width: 100vw;
@@ -372,7 +366,7 @@ body {
 }
 .shop-by-brand .shop-heading{
     text-align: center;
-    font-size: 2rem;
+    font-size: 3vw;
     font-weight: 700;
 }
 .shop-by-brand .shop-brands {

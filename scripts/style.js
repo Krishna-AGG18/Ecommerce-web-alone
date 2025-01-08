@@ -24,8 +24,8 @@ sliderDivs.forEach((div,index)=>{
 const slideDiv = ()=>{
     if (counter < 0) {
         counter = 0; // Prevent sliding left past the first image
-    } else if (counter > sliderDivs.length - 4) {
-        counter = sliderDivs.length - 4; // Prevent sliding right past the last image
+    } else if (counter > sliderDivs.length - 2) {
+        counter = sliderDivs.length - 2; // Prevent sliding right past the last image
     }
     sliderDivs.forEach(div=>{
         div.style.transform = `translateX(-${counter*326}px)`

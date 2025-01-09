@@ -4,6 +4,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    overflow: hidden;
 }
 
 body {
@@ -41,7 +42,7 @@ body {
 }
 #logo{
     border-radius: 50%;
-    width: 90px;
+    width: 10vw;
 }
 .nav-item1,
 .nav-item2 {

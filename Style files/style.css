@@ -4,7 +4,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    overflow: hidden;
+    overflow-x: hidden;
 }
 
 body {
@@ -407,4 +407,46 @@ body {
 }
 .best-left:hover , .best-right:hover{
     background-color: rgba(255,255,255,1);
+}
+
+
+
+
+
+
+@media (max-width:600px) {
+    .nav-item21{
+        display: none;
+    }
+    .showoff{
+        height: auto;
+        padding: 1rem;
+    }
+    .showoff div{
+        width: 90%;
+        height: 30vw;
+        /* height: 100%; */
+    }
+    .showoff div p{
+        padding: 0rem 5rem;
+    }
+    .recommended{
+        padding: 0 1rem;
+    }
+    .recommended h2{
+        font-size: 1.5rem;
+    }
+    .redirector{
+        /* flex-wrap: wrap; */
+        flex-direction: column;
+        gap: 10px;
+    }
+    .redirector img{
+        width:90%;
+    }
+    .best-seller{
+        align-items: center;
+        justify-content: center;
+        padding: 0rem 1rem;
+    }
 }

@@ -68,7 +68,7 @@ body {
     flex-direction: column;
     gap: .8rem;
     height: auto;
-    font-size: .8rem;
+    font-size: 1.5rem;
     /* padding: 20px; */
     padding-top: 30px;
     cursor: pointer;

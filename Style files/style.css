@@ -347,7 +347,7 @@ body {
 .best-seller-head{
     font-size: 2rem;
     font-weight: bold;
-    align-items: normal;
+    /* align-items: normal; */
 }
 .best-seller-items{
     display: flex;
@@ -410,9 +410,37 @@ body {
 .best-left:hover , .best-right:hover{
     background-color: rgba(255,255,255,1);
 }
-
-
-
+.movement-in-time{
+    padding: 1rem;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.movement-in-time p{
+    font-size: 2rem;
+    font-weight: bold;
+    box-sizing: border-box;
+}
+.movement-grid .item1{
+    grid-area: mechanical;
+}
+.movement-in-time .movement-grid{
+    display: grid;
+    grid-template-areas: 'mechanical mechanical . .'
+                         'mechanical mechanical . .';
+    gap: 10px;
+    width: 95vw;
+    align-content: center;
+    padding-block: 12px;
+}
+.movement-grid div{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
 
 @media (max-width:1109px) {
     .showoff div{
@@ -475,6 +503,29 @@ body {
         align-items: center;
         justify-content: center;
         padding: 0rem 1rem;
+    }
+    .movement-grid .item2{
+        grid-area: item2;
+    }
+    .movement-grid .item3{
+        grid-area: item3;
+    }
+    .movement-grid .item4{
+        grid-area: item4;
+    }
+    .movement-grid .item5{
+        grid-area: item5;
+    }
+    .movement-in-time .movement-grid{
+        display: grid;
+        grid-template-areas: 'mechanical mechanical mechanical mechanical'
+                             'mechanical mechanical mechanical mechanical'
+                             'item2 item2 item3 item3'
+                             'item4 item4 item5 item5';
+        gap: 10px;
+        width: 95vw;
+        align-content: center;
+        padding-block: 12px;
     }
 }
 @media (max-width:590px) {

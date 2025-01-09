@@ -389,6 +389,7 @@ body {
     /* justify-content: center; */
     flex-direction: column;
     cursor: pointer;
+    overflow: hidden;
 }
 .best-left,.best-right{
     top: 30vh;
@@ -442,7 +443,7 @@ body {
     cursor: pointer;
 }
 .addToCart{
-    padding: 6px 18px;
+    padding: 14px 16px;
     position: absolute;
     right: 20px;
     bottom: 0px;
@@ -450,7 +451,7 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    font-size: 45px;
+    font-size: 30px;
     font-weight: bolder;
     border: none;
     background-color: hsla(0, 0%, 100%, 0.151);

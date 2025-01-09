@@ -108,7 +108,7 @@ content_recomm.forEach((card, index) => {
     <div class="desc">${card.desc}</div>
     <div class="rate">${card.rate}  &nbsp;&nbsp;&nbsp;<strike>${card.str}</strike></div>
     </div>
-    <button class="addToCart">+</button>
+    <i class="fa-solid fa-plus addToCart"></i>
     </div>
     `
 });

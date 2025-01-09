@@ -441,7 +441,27 @@ body {
     align-items: center;
     cursor: pointer;
 }
-
+.addToCart{
+    padding: 6px 18px;
+    position: absolute;
+    right: 20px;
+    bottom: 0px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 45px;
+    font-weight: bolder;
+    border: none;
+    background-color: hsla(0, 0%, 100%, 0.151);
+    color: rgb(170, 0, 255);
+    cursor: pointer;
+    transition: all .3s ease-in-out;
+    opacity: 0;
+}
+.addToCart:hover{
+    background-color: hsla(0, 0%, 100%, 0.8);
+}
 @media (max-width:1109px) {
     .showoff div{
         width: 95%;
@@ -451,9 +471,6 @@ body {
         padding: 0rem 7rem;
         font-size: 5vw;
     }
-}
-@media (max-width:1045px) {
-    
 }
 @media (max-width:600px) {
     #logo{

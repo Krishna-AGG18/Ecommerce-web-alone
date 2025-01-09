@@ -93,22 +93,23 @@ let content_recomm = [
 ];
 
 let recommended = document.querySelector(".recommended .items");
-let best_seller = document.querySelector(".best-seller-items")
+let best_seller = document.querySelector(".best-seller-items");
 // let recomm_html = recommended.innerHTML;
 
 strii = "";
 content_recomm.forEach((card, index) => {
     strii += `
     <div class="card">
-                <div class="image">
-                    <img src="${card.img}" alt="watch${index + 1}">
-                </div>
-                <div class="info">
-                    <div class="name">${card.name}</div>
-                    <div class="desc">${card.desc}</div>
-                    <div class="rate">${card.rate}  &nbsp;&nbsp;&nbsp;<strike>${card.str}</strike></div>
-                </div>
-            </div>
+    <div class="image">
+    <img src="${card.img}" alt="watch${index + 1}">
+    </div>
+    <div class="info">
+    <div class="name">${card.name}</div>
+    <div class="desc">${card.desc}</div>
+    <div class="rate">${card.rate}  &nbsp;&nbsp;&nbsp;<strike>${card.str}</strike></div>
+    </div>
+    <button class="addToCart">+</button>
+    </div>
     `
 });
 best_seller.innerHTML = strii;

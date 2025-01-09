@@ -70,3 +70,21 @@ bestright.addEventListener("click",()=>{
     counter++;
     slideCard();
 })
+
+//for addtocart button
+let cards = document.querySelectorAll(".card");
+let addtobtns = document.querySelectorAll(".addToCart");
+
+cards.forEach((card)=>{
+    let addtobtn =card.querySelector(".addToCart");
+    card.addEventListener("mouseover",()=>{
+        addtobtn.style.opacity = "1";
+        // addtobtn.style.right = "20px";
+        addtobtn.style.bottom = "35px";
+    })
+    card.addEventListener("mouseout",()=>{
+        addtobtn.style.opacity = "0";
+        // addtobtn.style.right = "10px";
+        addtobtn.style.bottom = "0px";
+    })
+})

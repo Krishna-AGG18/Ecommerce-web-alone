@@ -464,6 +464,14 @@ body {
         padding: 0rem 1rem;
     }
 }
+@media (max-width:590px) {
+    .shop-by-brand{
+        padding: 2rem 10px;
+    }
+    .shop-by-brand .shop-brands img {
+        width: 30%;
+    }
+}
 @media (max-width:504px) {
     .nav-item2{
         gap: 10px;

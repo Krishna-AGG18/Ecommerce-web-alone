@@ -358,6 +358,7 @@ body {
     text-align: center;
     font-size: 2rem;
     font-weight: 700;
+    overflow: hidden;
 }
 
 .shop-by-brand .shop-brands {
@@ -444,9 +445,11 @@ body {
     cursor: pointer;
     overflow: hidden;
 }
-.info div{
+
+.info div {
     overflow: hidden;
 }
+
 .best-left,
 .best-right {
     top: 30vh;
@@ -532,44 +535,81 @@ body {
     background-color: hsla(0, 0%, 100%, 0.8);
 }
 
-.our-policies{
+.our-policies {
     margin-block: 15px;
     display: flex;
     justify-content: space-evenly;
     align-items: center;
     width: 100vw;
 }
-.our-policies div{
+
+.our-policies div {
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
 }
-.our-policies div P{
+
+.our-policies div P {
     font-weight: bolder;
-    font-size: 4vw;
+    font-size: 2.5vw;
     text-align: center;
 }
 
-.best-exp{
-    margin-block: 20px;
+.best-exp {
+    padding-block: 30px;
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
     gap: 10px;
+    background-color: #151414;
 }
-.best-exp-test{
+
+.best-exp-test {
     font-size: 2.5vw;
     font-weight: bold;
 }
-.best-exp-btn{
+
+.best-exp-btn {
     padding: .5vw 1.5vw;
-    font-size: 1.5vw;
+    font-size: 24px;
     font-weight: bold;
+    text-shadow: 0 0.0625em 0 #fff;
+    box-shadow: inset 0 0.0625em 0 0 #f4f4f4, 0 0.0625em 0 0 #efefef,
+        0 0.125em 0 0 #ececec, 0 0.25em 0 0 #e0e0e0, 0 0.3125em 0 0 #dedede,
+        0 0.375em 0 0 #dcdcdc, 0 0.425em 0 0 #cacaca, 0 0.425em 0.5em 0 #cecece;
+    transition: 0.15s ease;
+    border-radius: 0.5em;
+    cursor: pointer;
+    border: 0;
+    background-color: white;
+    color: #000000;
 }
 
+.best-exp-btn:active {
+    translate: 0 0.225em;
+    box-shadow: inset 0 0.03em 0 0 #f4f4f4, 0 0.03em 0 0 #efefef,
+        0 0.0625em 0 0 #ececec, 0 0.125em 0 0 #e0e0e0, 0 0.125em 0 0 #dedede,
+        0 0.2em 0 0 #dcdcdc, 0 0.225em 0 0 #cacaca, 0 0.225em 0.375em 0 #cecece;
+}
 
+.best-exp-create {
+    padding: 10px;
+}
+.foot-about a{
+    cursor: pointer;
+    border: 2px solid transparent;
+}
+.foot-about a:hover{
+    border: 2px solid wheat;
+}
+.foot-about a:first-child{
+    background: #000000;
+}
+.foot-about a:last-child{
+    background-color: rebeccapurple;
+}
 
 
 
@@ -704,6 +744,11 @@ body {
         font-size: 2vw;
         font-weight: bolder;
     }
+
+    .best-exp-test {
+        font-size: 1rem;
+        font-weight: bold;
+    }
 }
 
 @media (max-width:392px) {
@@ -719,6 +764,7 @@ body {
     .nav-item1 {
         gap: 2px;
     }
+
 }
 
 @media (max-width:302px) {
@@ -730,8 +776,8 @@ body {
         font-size: 5vw;
     }
 
-    .our-policies{
+    .our-policies {
         flex-direction: column;
     }
-    
+
 }

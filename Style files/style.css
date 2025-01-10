@@ -444,7 +444,9 @@ body {
     cursor: pointer;
     overflow: hidden;
 }
-
+.info div{
+    overflow: hidden;
+}
 .best-left,
 .best-right {
     top: 30vh;

@@ -145,25 +145,10 @@ body {
     display: flex;
     align-items: center;
     justify-content: space-around;
+flex-direction: column;
     gap: 1rem;
+    position: relative;
     /* Adds space between images */
-}
-
-.sliding-images div {
-    flex: 1;
-    /* Ensures each div grows/shrinks equally */
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    height: 100%;
-    /* Matches container height */
-}
-
-.sliding-images img {
-    width: auto;
-    height: 100%;
-    object-fit: cover;
-    border-radius: 8px;
 }
 
 .page-links {

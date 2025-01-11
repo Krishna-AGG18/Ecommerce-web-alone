@@ -597,7 +597,7 @@ body {
 .best-exp-create {
     padding: 10px;
 }
-.foot-about a{
+/* .foot-about a{
     cursor: pointer;
     border: 2px solid transparent;
 }
@@ -640,7 +640,7 @@ body {
   .footer-menu li a:hover {
     color: #ff5e14; /* Orangered hover color */
     text-decoration: underline; /* Underline effect */
-  }
+  } */
 
 
 @media (max-width:1109px) {

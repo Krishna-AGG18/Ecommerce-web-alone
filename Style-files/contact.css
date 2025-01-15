@@ -112,7 +112,7 @@ body {
 .icons div {
     border-radius: 50%;
     transition: transform 500ms ease-in-out;
-    padding: 25px 15px;
+    padding:15px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -351,7 +351,7 @@ textarea::-webkit-scrollbar-track {
         font-size: 2rem !important;
     }
     .icons div {
-        padding: 25px 15px;
+        padding: 15px;
     }
 
     .form-section form input, 

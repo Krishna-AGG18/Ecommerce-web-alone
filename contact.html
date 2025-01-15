@@ -164,6 +164,14 @@
         slider.classList.add("sliding-links-effect");
     }   
         })
+
+        window.addEventListener("resize", () => {
+    if (window.innerWidth > 768) {
+        if (slider.classList.contains("sliding-links-effect")) {
+            slider.classList.remove("sliding-links-effect");
+        }
+    }
+});
     </script>
 </body>
 

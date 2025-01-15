@@ -87,7 +87,7 @@ body {
     flex-direction: column;
     gap: 15px;
     position: relative;
-    height: 75vh;
+    height: 80vh;
     overflow: hidden;
     border-radius: 10px;
     background-color: rgba(0, 0, 0, 0.212);
@@ -133,7 +133,7 @@ body {
     box-shadow: 0px 4px 8px 0px rgba(250, 216, 216, 0.705);
     grid-area: foram;
     width: 50vw;
-    height: 75vh;
+    height: 80vh;
     border-radius: 10px;
     display: flex;
     gap: 20px;
@@ -148,7 +148,6 @@ body {
     display: flex;
     flex-direction: column;
     gap: 10px;
-    background: url();
     }
 
 .form-section .image{

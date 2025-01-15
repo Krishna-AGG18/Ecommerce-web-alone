@@ -1,0 +1,145 @@
+@import url('https://fonts.googleapis.com/css2?family=Anton&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Protest+Revolution&family=Roboto&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: "Poppins", serif;
+}
+
+body {
+    background: linear-gradient(360deg, #2e1858 0%, #000000 100%);
+    color: white;
+    overflow-x: hidden;
+    height: auto;
+    background-size: cover; 
+    background-repeat: no-repeat; 
+    background-attachment: fixed;
+}
+
+.navbar {
+    display: grid;
+    justify-content: space-between;
+    align-content: center;
+    grid-template-columns: auto auto;
+    font-size: 1.2rem;
+    font-weight: 700;
+}
+
+.navbar-brandname {
+    cursor: pointer;
+    color: white;
+    transition: all .8s ease-in-out;
+    text-align: center;
+}
+
+.navbar-brandname:hover {
+    color: goldenrod;
+}
+
+.navbar-brandname::after {
+    display: block;
+    content: '';
+    border: 2px solid whitesmoke;
+    transform: scale(0);
+    transition: transform 550ms ease-in-out;
+}
+
+.navbar-brandname:hover:after {
+    transform: scale(1);
+}
+
+.page-links {
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1.2rem;
+
+}
+
+.page-links div {
+    color: #aca7a7;
+    transition: all .8s ease-in-out;
+    cursor: pointer;
+}
+
+.page-links div::after {
+    display: block;
+    content: '';
+    border-bottom: solid 3px darkorchid;
+    transform: scaleX(0);
+    transition: transform 550ms ease-in-out;
+}
+
+.page-links div:hover {
+    color: white;
+}
+
+.page-links div:hover:after {
+    transform: scaleX(1);
+}
+.hamburger{
+    display: none !important;
+    z-index: 10;
+}
+.sliding-links {
+    position: fixed; /* Keep it fixed on the screen */
+    top: 0;
+    z-index: 5;
+    right: 0;
+    overflow: hidden;
+    display: flex;
+    height: 100vh;
+    backdrop-filter: blur(20px);
+    width: 50vh;
+    visibility: hidden; /* Initially hidden */
+    opacity: 0; /* Start as fully transparent */
+    transform: translateX(100%); /* Start off-screen to the right */
+    flex-direction: column;
+    gap: 10vh; 
+    transition: transform 1s ease-in-out, opacity 0.5s ease-in-out, visibility 0s linear 1s; /* Smooth transition */
+}
+
+.sliding-links-effect {
+    visibility: visible; /* Make it visible */
+    opacity: 1; /* Fully opaque */
+    transform: translateX(0); /* Slide into view */
+    transition: transform 1s ease-in-out, opacity 0.5s ease-in-out; /* Smooth transition */
+}
+.sliding-links div div{
+    padding:20px 0;
+    font-size: 1.5rem;
+    font-weight: bolder;
+}
+.profcart div{
+    display: flex;
+    align-items: center;
+}
+.sliding-links div div::after {
+    display: block;
+    content: '';
+    border-bottom: solid 3px darkorchid;
+    transform: scaleX(0);
+    transition: transform 550ms ease-in-out;
+}
+.sliding-links div{
+    overflow: visible;
+}
+.sliding-links div div:hover {
+    color: white;
+}
+
+.sliding-links div div:hover:after {
+    transform: scaleX(1);
+}
+
+@media (max-width: 768px) {
+    .page-links{
+        display: none;
+    }
+    .hamburger{
+        display: flex !important;
+        align-items: center;
+        padding-bottom: 5px;
+    }
+}

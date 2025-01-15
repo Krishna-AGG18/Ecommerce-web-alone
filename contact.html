@@ -99,6 +99,32 @@
             </div>
         </div>
     </div>
+    <div class="sliding-links p-8">
+        <div class="pages">
+            <div class="item10">
+                <a href="index.html">Home</a>
+            </div>
+            <div class="item20">
+                <a href="#">Collection</a>
+            </div>
+            <div class="item30">
+                <a href="#">About us</a>
+            </div>
+            <div class="item40">
+                <a href="#">Contact</a>
+            </div>
+        </div>
+        <div class="profcart">
+            <div class="item50">
+                <i class="fa-solid fa-user"> &nbsp;&nbsp;</i>Profile
+            </div>
+            <div class="item60">
+                <i class="fa-solid fa-cart-arrow-down"> &nbsp;&nbsp;</i>Your Cart
+            </div>
+        </div>
+    </div>
+
+    </div>
     <script>
         let str = "Thank you !!";
         let arr = Array.from(str);
@@ -126,6 +152,18 @@
 
         // Initial text animation
         appendText();
+
+
+        //for hamburger
+        let btn = document.querySelector(".hamburger")
+        let slider = document.querySelector(".sliding-links")
+        btn.addEventListener("click", () => {
+            if (slider.classList.contains("sliding-links-effect")) {
+        slider.classList.remove("sliding-links-effect");
+    } else {
+        slider.classList.add("sliding-links-effect");
+    }   
+        })
     </script>
 </body>
 

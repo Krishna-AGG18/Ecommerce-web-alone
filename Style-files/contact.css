@@ -78,9 +78,7 @@ body {
 .page-links div:hover:after {
     transform: scaleX(1);
 }
-.hamburger{
-    display: none;
-}
+
 .aboutme {
     grid-area: aboutme;
     /* border: 2px solid red; */
@@ -226,25 +224,56 @@ textarea::-webkit-scrollbar-track {
     object-fit: cover;
 }
 
-/* @media (max-width:968px) {
-    .content-box{
-        grid-template-areas: "aboutme";
-
-    }
+.hamburger{
+    display: none;
+    z-index: 1;
 }
-@media (max-width:699px) {
-    .navbar{
-        justify-content: space-between;
-    }
-    .page-links{
-        display: none;
-    }
-    .hamburger{
-        display: block;
-    }
-} */
+.sliding-links {
+    position: fixed; /* Keep it fixed on the screen */
+    top: 0;
+    right: 0;
+    display: flex;
+    height: 100vh;
+    backdrop-filter: blur(10px);
+    width: 50vh;
+    visibility: hidden; /* Initially hidden */
+    opacity: 0; /* Start as fully transparent */
+    transform: translateX(100%); /* Start off-screen to the right */
+    flex-direction: column;
+    gap: 20vh; 
+    transition: transform 1s ease-in-out, opacity 0.5s ease-in-out, visibility 0s linear 1s; /* Smooth transition */
+}
 
+.sliding-links-effect {
+    visibility: visible; /* Make it visible */
+    opacity: 1; /* Fully opaque */
+    transform: translateX(0); /* Slide into view */
+    transition: transform 1s ease-in-out, opacity 0.5s ease-in-out; /* Smooth transition */
+}
+.sliding-links div div{
+    padding:20px 0;
+    font-size: 1.5rem;
+    font-weight: bolder;
+}
+.sliding-links div div::after {
+    display: block;
+    content: '';
+    border-bottom: solid 3px darkorchid;
+    transform: scaleX(0);
+    transition: transform 550ms ease-in-out;
+}
+
+.sliding-links div div:hover {
+    color: white;
+}
+
+.sliding-links div div:hover:after {
+    transform: scaleX(1);
+}
 @media (max-width: 1200px) {
+    body{
+      overflow-x: hidden;  
+    }
     .content-box {
         display: flex; /* Switch to flexbox for simplicity */
         flex-direction: column; /* Stack items vertically */
@@ -275,8 +304,9 @@ textarea::-webkit-scrollbar-track {
     }
 
     .hamburger {
-        display: block;
-        text-align: right;
+        display: flex;
+        align-items: center;
+        padding-bottom: 5px;
     }
 
     .aboutme, .form-section {
@@ -332,5 +362,40 @@ textarea::-webkit-scrollbar-track {
     .btn {
         padding: 10px 20px;
         font-size: 14px;
+    }
+    .sliding-links{
+        width: 40vh;
+    }
+    .sliding-links div{
+        font-size: 1rem;
+    }
+}
+@media (max-width: 308px) {
+    .form-section .image {
+        padding: 10px;
+        gap: 10px; /* Adjust gap between elements */
+        font-size: 0.9rem; /* Reduce font size for smaller screens */
+        text-align: center;
+    }
+
+    .form-section .image .dynamic {
+        font-size: 1rem; /* Adjust dynamic text size */
+        word-wrap: break-word; /* Ensure long words break properly */
+    }
+
+    .form-section .image i {
+        font-size: 3rem; /* Reduce icon size */
+        padding: 1.5rem; /* Adjust padding around the icon */
+    }
+
+    .form-section {
+        padding: 10px; /* Add inner padding */
+        gap: 10px; /* Adjust gap */
+        flex-direction: column; /* Ensure elements stack vertically */
+    }
+
+    .form-section form {
+        width: 100%; /* Ensure the form takes full width */
+        padding: 5px; /* Add padding around form elements */
     }
 }

@@ -660,7 +660,60 @@ nav {
     text-decoration: underline;
     /* Underline effect */
 }
+.sliding-links {
+    position: fixed; /* Keep it fixed on the screen */
+    top: 0;
+    z-index: 5;
+    right: 0;
+    overflow: hidden;
+    display: flex;
+    height: 100vh;
+    backdrop-filter: blur(20px);
+    width: 50vh;
+    visibility: hidden; /* Initially hidden */
+    opacity: 0; /* Start as fully transparent */
+    transform: translateX(100%); /* Start off-screen to the right */
+    flex-direction: column;
+    gap: 10vh; 
+    transition: transform 1s ease-in-out, opacity 0.5s ease-in-out, visibility 0s linear 1s; /* Smooth transition */
+}
 
+.sliding-links-effect {
+    visibility: visible; /* Make it visible */
+    opacity: 1; /* Fully opaque */
+    transform: translateX(0); /* Slide into view */
+    transition: transform 1s ease-in-out, opacity 0.5s ease-in-out; /* Smooth transition */
+}
+.sliding-links div div{
+    padding:20px 0;
+    font-size: 1.5rem;
+    font-weight: bolder;
+}
+.profcart div{
+    display: flex;
+    align-items: center;
+}
+.sliding-links div div::after {
+    display: block;
+    content: '';
+    border-bottom: solid 3px darkorchid;
+    transform: scaleX(0);
+    transition: transform 550ms ease-in-out;
+}
+.sliding-links div{
+    overflow: visible;
+}
+.sliding-links div div:hover {
+    color: white;
+}
+
+.sliding-links div div:hover:after {
+    transform: scaleX(1);
+}
+.hamburger{
+    display: none !important;
+    z-index: 10;
+}
 @media (max-width:1109px) {
     .showoff div {
         width: 95%;
@@ -673,7 +726,7 @@ nav {
     }
 }
 
-@media (max-width:600px) {
+@media (max-width:640px) {
     #logo {
         width: 80px;
     }
@@ -687,11 +740,16 @@ nav {
         font-size: 1rem;
         padding-top: 10px;
     }
-
+    .nav-item2{
+        display: none;
+    }
     .nav-item2 div p {
         display: none;
     }
-
+    .hamburger{
+        display: block !important;
+        z-index: 10;
+    }
     .nav-item21 {
         display: none;
     }
@@ -782,7 +840,9 @@ nav {
     .nav-item2 div {
         padding-top: 0;
     }
-
+    .sliding-links{
+        width: 40vh;
+    }
     .page-links {
         padding: 2vw;
         margin-top: 10px;

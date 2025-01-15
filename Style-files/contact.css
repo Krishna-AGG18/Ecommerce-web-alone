@@ -1,16 +1,22 @@
 @import url('https://fonts.googleapis.com/css2?family=Anton&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Protest+Revolution&family=Roboto&display=swap');
-*{
+
+* {
     margin: 0;
     padding: 0;
     font-family: "Poppins", serif;
 }
 
-body{
+body {
     background: linear-gradient(360deg, #2e1858 0%, #000000 100%);
     color: white;
+    overflow-x: hidden;
+    height: auto;
+    background-size: cover; /* Ensures the gradient covers the entire area */
+    background-repeat: no-repeat; /* Prevents repeating */
+    background-attachment: fixed;
 }
 
-.navbar{
+.navbar {
     display: grid;
     justify-content: space-between;
     align-content: center;
@@ -18,90 +24,94 @@ body{
     font-size: 1.2rem;
     font-weight: 700;
 }
-.navbar-brandname{
+
+.navbar-brandname {
     cursor: pointer;
     color: white;
     transition: all .8s ease-in-out;
     text-align: center;
 }
-.navbar-brandname:hover{
+
+.navbar-brandname:hover {
     color: goldenrod;
 }
-.navbar-brandname::after{
+
+.navbar-brandname::after {
     display: block;
     content: '';
     border: 2px solid whitesmoke;
     transform: scale(0);
     transition: transform 550ms ease-in-out;
 }
-.navbar-brandname:hover:after{
+
+.navbar-brandname:hover:after {
     transform: scale(1);
 }
-.page-links{
+
+.page-links {
     text-align: center;
     display: flex;
     justify-content: center;
     align-items: center;
     gap: 1.2rem;
-    
+
 }
-.page-links div{
+
+.page-links div {
     color: #aca7a7;
     transition: all .8s ease-in-out;
     cursor: pointer;
 }
-.page-links div::after{
+
+.page-links div::after {
     display: block;
     content: '';
     border-bottom: solid 3px darkorchid;
     transform: scaleX(0);
     transition: transform 550ms ease-in-out;
 }
-.page-links div:hover{
+
+.page-links div:hover {
     color: white;
 }
-.page-links div:hover:after{
+
+.page-links div:hover:after {
     transform: scaleX(1);
 }
-
-.aboutme{
+.hamburger{
+    display: none;
+}
+.aboutme {
     grid-area: aboutme;
     /* border: 2px solid red; */
     width: 30vw;
     display: flex;
     flex-direction: column;
     gap: 15px;
+    position: relative;
     height: 75vh;
+    overflow: hidden;
     border-radius: 10px;
     background-color: rgba(0, 0, 0, 0.212);
     box-shadow: 0px 4px 8px 0px rgba(250, 216, 216, 0.705);
 }
-.form-section{
-    background-color: rgba(0, 0, 0, 0.212);
-    box-shadow: 0px 4px 8px 0px rgba(250, 216, 216, 0.705);
-    grid-area: foram;
-    width: 50vw ;
-    height: 75vh;
-    border-radius: 10px;
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
-}
-.content-box{
+
+.content-box {
     display: grid;
     height: 85vh;
-    border: 2px solid red;
     grid-template-areas: "aboutme foram";
     justify-content: space-around;
     align-content: center;
     width: 100vw;
 }
-.icons{
+
+.icons {
     display: flex;
     gap: 20px;
     align-items: center;
 }
-.icons div{
+
+.icons div {
     border-radius: 50%;
     transition: transform 500ms ease-in-out;
     padding: 25px 15px;
@@ -109,81 +119,218 @@ body{
     justify-content: center;
     align-items: center;
     cursor: pointer;
+    position: relative;
 }
-.icons div:hover{
+.icons div p{
+    position: absolute;
+    
+}
+.icons div:hover {
     transform: scale(1.1);
     background-color: rgba(0, 0, 0, 0.412);
 }
 
+.form-section {
+    background-color: rgba(0, 0, 0, 0.212);
+    box-shadow: 0px 4px 8px 0px rgba(250, 216, 216, 0.705);
+    grid-area: foram;
+    width: 50vw;
+    height: 75vh;
+    border-radius: 10px;
+    display: flex;
+    gap: 20px;
+    /* align-items: center;
+    justify-content: center; */
+    position: relative;
+}
+
 .form-section form {
+    width: 50%;
+    height: 100%;
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    gap: 10px;
+    background: url();
+    }
+
+.form-section .image{
+    width: 50%;
+    text-align: center;
+    display: flex;
+    gap: 20px;
     align-items: center;
-    gap: 15px;
-    height: 100%;
-    padding: 20px;
-    box-sizing: border-box;
+    flex-direction: column;
 }
-
-.form-section label {
-    font-size: 1rem;
-    font-weight: 600;
-    margin-bottom: 5px;
-    color: #f8f8f8;
+.form-section .image i{
+    border-radius: 50%;
+    padding: 2rem 2.2rem;
+    cursor: pointer;
+    transition: background-color 500ms ease-in-out;
 }
-
-.form-section input, 
-.form-section textarea {
+.form-section .image i:hover{
+    background-color: rgba(255, 255, 255, 0.11);
+}
+.form-section form input,
+.form-section form textarea {
     width: 100%;
-    max-width: 400px;
+    border-radius: 8px;
     padding: 10px;
-    font-size: 1rem;
+    background-color: rgba(0, 0, 0, 0.412);
     border: 1px solid #ddd;
     border-radius: 5px;
-    background-color: #2e2e2e;
-    color: #fff;
     outline: none;
     transition: all 0.3s ease-in-out;
 }
 
-.form-section input:focus, 
-.form-section textarea:focus {
+.form-section form input:focus,
+.form-section form textarea:focus {
     border-color: #6a5acd;
     box-shadow: 0px 0px 5px #6a5acd;
 }
 
-textarea {
-    resize: none;
-    height: 100px;
+textarea::-webkit-scrollbar {
+    width: 8px;
+    /* Width of the scrollbar */
 }
 
-.form-section button {
-    padding: 10px 20px;
-    font-size: 1rem;
-    font-weight: 600;
-    color: white;
-    background-color: #6a5acd;
-    border: none;
+textarea::-webkit-scrollbar-thumb {
+    background: #6a5acd;
+    /* Color of the scrollbar thumb */
     border-radius: 5px;
+    /* Rounded corners for the thumb */
+}
+
+textarea::-webkit-scrollbar-thumb:hover {
+    background: #836fff;
+    /* Thumb color on hover */
+}
+
+textarea::-webkit-scrollbar-track {
+    background: rgba(0, 0, 0, 0.412);
+    border-radius: 5px;
+}
+.btn{
+    font-weight: 700;
+    box-sizing: border-box;
     cursor: pointer;
-    transition: background-color 0.3s ease-in-out;
+    transition: background-color 500ms ease-in-out !important;
+}
+.btn:hover{
+    background-color: rgb(14, 175, 100) !important;
+    outline: none !important;
+    border: none;
+    box-shadow: 0 4px 8px 0px rgb(0, 255, 255);
 }
 
-.form-section button:hover {
-    background-color: #836fff;
+.bg{
+    object-fit: cover;
 }
 
-.form-section .form-name {
-    display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
-    gap: 10px;
-    width: 100%;
+/* @media (max-width:968px) {
+    .content-box{
+        grid-template-areas: "aboutme";
+
+    }
+}
+@media (max-width:699px) {
+    .navbar{
+        justify-content: space-between;
+    }
+    .page-links{
+        display: none;
+    }
+    .hamburger{
+        display: block;
+    }
+} */
+
+@media (max-width: 1200px) {
+    .content-box {
+        display: flex; /* Switch to flexbox for simplicity */
+        flex-direction: column; /* Stack items vertically */
+        align-items: center; /* Center the items horizontally */
+        gap: 20px; /* Add space between items */
+        padding: 10px; /* Adjust padding */
+    }
+
+    .aboutme, .form-section {
+        width: 90%; /* Make both items take up most of the available width */
+        height: auto; /* Allow height to adjust dynamically */
+        overflow: visible;
+    }
+
 }
 
-.form-section .form-name div {
-    flex: 1 1 calc(50% - 10px);
-    max-width: calc(50% - 10px);
-    min-width: 200px;
+
+@media (max-width: 768px) {
+    .navbar {
+        grid-template-columns: 1fr auto;
+    }
+    .page-links{
+        display: none;
+    }
+    .navbar-brandname {
+        text-align: left;
+        padding-left: 1rem;
+    }
+
+    .hamburger {
+        display: block;
+        text-align: right;
+    }
+
+    .aboutme, .form-section {
+        width: 100%;
+        margin: auto;
+    }
+
+    .icons {
+        justify-content: space-evenly;
+    }
+
+    .form-section form, .form-section .image {
+        width: 100%;
+    }
+
+    .form-section {
+
+        flex-direction: column-reverse;
+        gap: 30px;
+        height: auto;
+    }
+
+    .form-section form input, 
+    .form-section form textarea {
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 480px) {
+    .navbar {
+        padding: 10px;
+    }
+
+    .navbar-brandname {
+        font-size: 1.5rem;
+    }
+
+    .aboutme p {
+        font-size: 1rem;
+    }
+    .naam{
+        font-size: 2rem !important;
+    }
+    .icons div {
+        padding: 15px;
+    }
+
+    .form-section form input, 
+    .form-section form textarea {
+        font-size: 12px;
+    }
+
+    .btn {
+        padding: 10px 20px;
+        font-size: 14px;
+    }
 }

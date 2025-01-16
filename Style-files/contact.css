@@ -333,7 +333,11 @@ textarea::-webkit-scrollbar-track {
         font-size: 14px;
     }
 }
-
+@media (max-width:508px) {
+    .sliding-links{
+        width: 40vh;
+    }
+}
 @media (max-width: 480px) {
     .navbar {
         padding: 10px;
@@ -367,6 +371,19 @@ textarea::-webkit-scrollbar-track {
     }
     .sliding-links div{
         font-size: 1rem;
+    }
+}
+@media (max-width:400px) {
+    .sliding-links{
+        width: 30vh;
+    }
+    .sliding-links div div {
+        font-size: 1rem;
+    }
+}
+@media (max-width:310px) {
+    .sliding-links{
+        width: 25vh;
     }
 }
 @media (max-width: 308px) {

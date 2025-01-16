@@ -324,6 +324,9 @@ ul li {
     .main{
         height: 15vh;
     }
+    .sliding-links{
+        width: 40vh;
+    }
     .container{
         grid-template-areas: 'one'
         'two' 
@@ -337,14 +340,25 @@ ul li {
         font-size: 1rem;
     }
 }
-
+@media (max-width:438px) {
+    .sliding-links{
+        width: 30vh;
+    }
+    .sliding-links div div {
+        font-size: 1rem;
+    }
+}
 @media (max-width:380px) {
     .main{
         height: 10vh;
     }
 }
 
-
+@media (max-width:310px) {
+    .sliding-links{
+        width: 25vh;
+    }
+}
 
 body::-webkit-scrollbar {
     width: 8px;

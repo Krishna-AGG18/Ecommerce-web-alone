@@ -59,7 +59,7 @@ nav {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 5px 20px;
+    padding: 10px 20px;
     /* overflow: hidden; */
     font-weight: 700;
     width: 100vw;
@@ -70,8 +70,7 @@ nav {
     width: 10vw;
 }
 
-.nav-item1,
-.nav-item2 {
+.nav-item1 {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -82,57 +81,12 @@ nav {
     display: flex;
     justify-content: center;
     align-items: center;
-    font-size: 2vw;
-}
-
-.nav-item2 {
-    gap: 1.5rem;
-    font-size: 1rem;
-}
-
-.nav-item2 div {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    padding-top: 10px;
-    gap: .8rem;
-    height: auto;
-    font-size: 1rem;
-    cursor: pointer;
-    box-sizing: border-box;
-    /* border: 2px solid black; */
-}
-
-.nav-item2 div i {
-    font-size: 1.2rem;
-}
-
-.nav-item2 div p {
-    color: #555;
-    transition: all .8s ease-in-out;
-}
-.nav-item2 div p::after {
-    display: block;
-    content: '';
-    border-bottom: solid 3px darkorchid;
-    transform: scaleX(0);
-    transition: transform 550ms ease-in-out;
-}
-
-.nav-item2 div p:hover:after {
-    transform: scaleX(1);
-}
-
-.nav-item2 div:hover p {
-    color: white;
-    cursor: pointer;
+    font-size: 3vw;
 }
 
 .nav-item21 {
     display: flex;
     align-items: center;
-    gap: 1rem;
 }
 
 .nav-item21 div {
@@ -140,28 +94,37 @@ nav {
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    font-size: 1.5vw;
-    /* gap: .2rem; */
-    color: gray;
-    transition: all .1 s ease-in-out;
+    font-size: 2vw;
+    transition: all 500ms ease-in-out;
     cursor: pointer;
     border-bottom: 2px solid black;
+    position: relative;
+    width: auto;
+    padding: 1rem .5rem;
+    overflow: hidden;
 }
-.nav-item21 div p{
+.nav-item21 div i{
+    padding: 1vw;  
+    border-radius: 50%;
+    display: flex;
+    color: gray;
     transition: all 500ms ease-in-out;
 }
-.nav-item21 div p::after {
-    display: block;
-    content: '';
-    border-bottom: solid 3px darkorchid;
-    transform: scaleX(0);
-    transition: transform 550ms ease-in-out;
+.nav-item21 div i:hover, .nav-item21 div:hover i{
+    color: white;
+    background-color: rgba(255, 255, 255, 0.08);
 }
-.nav-item21 div p:hover{
-    color: whitesmoke;
+.nav-item21 div p{
+    transition: all 750ms ease-in-out;
+    opacity: 0;
+    padding-top: 10px;
+    font-size: .9vw;
+    position: absolute;
+    bottom: -2px;
 }
-.nav-item21 div p:hover:after {
-    transform: scaleX(1);
+.nav-item21 div:hover p{
+    opacity: 1;
+    color: goldenrod;
 }
 
 .sliding-images {
@@ -735,7 +698,7 @@ nav {
         font-size: 24px;
     }
 
-    .nav-item2 div {
+    /* .nav-item2 div {
         padding-block: 3px;
         font-size: 1rem;
         padding-top: 10px;
@@ -745,7 +708,7 @@ nav {
     }
     .nav-item2 div p {
         display: none;
-    }
+    } */
     .hamburger{
         display: block !important;
         z-index: 10;
@@ -833,13 +796,13 @@ nav {
 }
 
 @media (max-width:504px) {
-    .nav-item2 {
+    /* .nav-item2 {
         gap: 10px;
-    }
+    } */
 
-    .nav-item2 div {
+    /* .nav-item2 div {
         padding-top: 0;
-    }
+    } */
     .sliding-links{
         width: 40vh;
     }
@@ -858,7 +821,14 @@ nav {
         font-weight: bold;
     }
 }
-
+@media (max-width:410px) {
+    .sliding-links{
+        width: 30vh;
+    }
+    .sliding-links div div{
+        font-size: 1rem;
+    }
+}
 @media (max-width:392px) {
 
     #logo {
@@ -887,5 +857,7 @@ nav {
     .our-policies {
         flex-direction: column;
     }
-
+    .sliding-links{
+        width: 25vh;
+    }
 }

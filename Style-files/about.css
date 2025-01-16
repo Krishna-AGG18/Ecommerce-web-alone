@@ -352,14 +352,12 @@ body::-webkit-scrollbar {
 }
 
 body::-webkit-scrollbar-thumb {
-    background: #6a5acd;
+    background: #2e1192;
     /* Color of the scrollbar thumb */
-    border-radius: 5px;
-    /* Rounded corners for the thumb */
 }
 
 body::-webkit-scrollbar-thumb:hover {
-    background: #836fff;
+    background: #2e1e92;
     /* Thumb color on hover */
 }
 

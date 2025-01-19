@@ -683,7 +683,7 @@ nav {
 @media (max-width:1109px) {
     .showoff div {
         width: 95%;
-        height: 30vh;
+        height: 40vh;
     }
 
     .showoff div p {
@@ -725,12 +725,13 @@ nav {
 
     .showoff {
         height: auto;
-        padding: 1rem;
+        /* padding: 1rem; */
+        padding-top: 1rem;
     }
 
     .showoff div {
-        width: 95%;
-        height: 30vw;
+        width: 90%;
+        height: 40vw;
         /* height: 100%; */
     }
 

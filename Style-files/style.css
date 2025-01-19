@@ -332,18 +332,20 @@ nav {
     overflow: hidden;
 }
 
-.new-cards {
+.new-cardss {
     width: 100%;
     /* height: 100%;  */
-    height: 60vh;
+    /* height: 60vh; */
     display: flex;
     gap: 15px;
+    /* flex-wrap: wrap; */
+    overflow-x: scroll;
 }
 
-.new-cards img {
+/* .new-cardss img {
     height: 60vh;
-    width: auto;
-}
+    width: 60vh;
+} */
 
 .shop-by-brand {
     padding: 2rem 2rem;
@@ -388,7 +390,7 @@ nav {
     padding: 0rem 2rem;
     background-color: #151313;
     width: 100vw;
-    height: 75vh;
+    height: auto;
     overflow: hidden;
     display: flex;
     flex-direction: column;
@@ -713,6 +715,9 @@ nav {
     .hamburger{
         display: block !important;
         z-index: 10;
+    }
+    .new-cardss{
+        flex-direction: column;
     }
     .nav-item21 {
         display: none;

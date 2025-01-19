@@ -108,3 +108,17 @@ window.addEventListener("resize", () => {
         }
     }
 });
+
+
+function adjustContentPadding() {
+    const navbar = document.querySelector('.navbar');
+    const content = document.querySelector('.slide-container');
+    const navbarHeight = navbar.offsetHeight;
+    content.style.paddingTop = `${navbarHeight}px`;
+  }
+
+  // Run on page load
+  window.addEventListener('load', adjustContentPadding);
+
+  // Run on window resize
+  window.addEventListener('resize', adjustContentPadding);

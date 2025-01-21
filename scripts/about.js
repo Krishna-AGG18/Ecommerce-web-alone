@@ -1,3 +1,14 @@
+// function adjustPaddingAbout(){
+//     const navbar = document.querySelector("nav");
+//     const text = document.querySelector(".main");
+
+//     const navheight = navbar.offsetHeight;
+//     text.style.paddingTop = `${navheight}px`
+// }
+
+// window.addEventListener("load",adjustPaddingAbout);
+// window.addEventListener("resize",adjustPaddingAbout);
+
 //for hamburger
 let btn = document.querySelector(".hamburger")
 let slider = document.querySelector(".sliding-links")

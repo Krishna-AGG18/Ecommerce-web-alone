@@ -191,6 +191,16 @@ body {
 }
 .containerCart .recipt{
     grid-area: parchi;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+.containerCart .recipt>div{
+    display: flex;
+    justify-content: space-between;
+}
+.containerCart .recipt .head, .containerCart .recipt .total{
+    font-weight: bolder;
 }
 .containerCart .cartItems>div{
     display: flex;
@@ -247,7 +257,6 @@ body {
   overflow: hidden;
   text-overflow: ellipsis;
 }
-
 
 .cartItems::-webkit-scrollbar {
     width: 10px;

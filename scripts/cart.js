@@ -52,6 +52,52 @@ function updateCart() {
                 updateCart(); // Re-render cart
             });
         });
+
+        const recipt = document.querySelector(".containerCart .recipt")
+        let length = chronoCart.length;
+        let rate = 0;
+        chronoCart.forEach((e)=>{
+            rate += parseInt(e.price.split(" ")[0].replace("$",""))
+        })
+        let discrate = 0.1*rate;
+        let totalamt = rate - discrate;
+        let str2 = "";
+        str2 = `
+        <div class="head">
+                PRICE DETAILS
+            </div>
+            <div class="price">
+                <div>
+                    Price(${length} item)
+                </div>
+                <div>
+                    $${rate}
+                </div>
+            </div>
+            <div class="discount">
+                <div>
+                    Discount
+                </div>
+                <div>
+                   $${discrate}
+                </div>
+            </div>
+            <div class="delivery">
+                <div>
+                    Delivery Charges
+                </div>
+                <div>
+                    <strike>$25</strike> FREE
+                </div>
+            </div>
+            <hr>
+            <div class="total">
+                <h4>TOTAL AMOUNT</h4>
+                <div class="totalrate">$${totalamt}</div>
+            </div>
+            <hr>
+            YOU SAVED $${discrate} i.e, 10% of the total amount.`
+        recipt.innerHTML = str2;
     } else {
         let empty = document.querySelector(".empty");
         let container = document.querySelector(".containerCart");

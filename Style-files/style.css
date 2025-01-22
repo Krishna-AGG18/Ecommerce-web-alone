@@ -15,10 +15,8 @@ body {
 
 }
 
-/* For Webkit browsers (Chrome, Safari, Edge) */
 ::-webkit-scrollbar {
     width: 10px;
-    /* width of the scrollbar */
 }
 
 ::-webkit-scrollbar-thumb {
@@ -27,13 +25,11 @@ body {
 
 ::-webkit-scrollbar-track {
     background: #000000;
-    /* color of the track behind the scrollbar */
     border-radius: 5px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
     background-color: #555;
-    /* darker color when hovered */
     cursor: grab;
 }
 

@@ -122,3 +122,5 @@ function adjustContentPadding() {
 
   // Run on window resize
   window.addEventListener('resize', adjustContentPadding);
+
+// functions for add tocart buttons

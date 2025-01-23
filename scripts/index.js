@@ -32,5 +32,6 @@ addtoCartbtns.forEach((btn)=>{
             })
             localStorage.setItem("chronoCart",JSON.stringify(chronoCart));
         }
+
     })
 })

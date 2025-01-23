@@ -99,6 +99,12 @@ nav {
     width: auto;
     padding: 1rem .5rem;
     overflow: hidden;
+    position: relative;
+}
+.nav-item21 .addtocart .length{
+    position: absolute !important;
+    bottom: 0   ;
+    font-size: 1rem;
 }
 .nav-item21 div i{
     padding: 1vw;  

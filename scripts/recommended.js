@@ -96,7 +96,7 @@ let recommended = document.querySelector(".recommended .items");
 let best_seller = document.querySelector(".best-seller-items");
 // let recomm_html = recommended.innerHTML;
 
-strii = "";
+var strii = "";
 content_recomm.forEach((card, index) => {
     strii += `
     <div class="card">

@@ -1,7 +1,9 @@
 // functions for add tocart buttons
+
 let addtoCartbtns = document.querySelectorAll(".addToCart");
 addtoCartbtns.forEach((btn)=>{
     btn.addEventListener("click",()=>{
+        console.log("clicked")
         if(localStorage.getItem("chronoCart") == null){
             let chronoCart = [];
             let parent = btn.parentElement;
@@ -15,6 +17,8 @@ addtoCartbtns.forEach((btn)=>{
                 proddesc :desc,
                 price : rate
             })
+            let cartCount = document.querySelector(".length")
+            cartCount.innerHTML = chronoCart.length;
             localStorage.setItem("chronoCart",JSON.stringify(chronoCart));
         }
         else{
@@ -30,8 +34,15 @@ addtoCartbtns.forEach((btn)=>{
                 proddesc :desc,
                 price : rate
             })
+            let cartCount = document.querySelector(".length")
+            cartCount.innerHTML = chronoCart.length;
             localStorage.setItem("chronoCart",JSON.stringify(chronoCart));
         }
-
     })
 })
+window.addEventListener("load",()=>{
+    let cartCount = document.querySelector(".length")
+    
+    cartCount.innerHTML = (localStorage.getItem("chronoCart"))? JSON.parse(localStorage.getItem("chronoCart")).length : "0";
+})
+

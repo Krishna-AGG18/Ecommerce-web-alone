@@ -14,7 +14,7 @@ let bestSeller =[
 ];
 
 let brands = document.querySelector(".shop-brands");
-str = "";
+var str = "";
 bestSeller.forEach((elem,index)=>{
     str +=`
         <img src="${elem}" alt="brand${index+1}">

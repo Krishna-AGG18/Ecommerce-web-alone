@@ -97,14 +97,17 @@ nav {
     border-bottom: 2px solid black;
     position: relative;
     width: auto;
-    padding: 1rem .5rem;
+    padding: 0 .5rem;
     overflow: hidden;
     position: relative;
 }
 .nav-item21 .addtocart .length{
     position: absolute !important;
-    bottom: 0   ;
-    font-size: 1rem;
+    font-size: 12px;
+    color: rgb(255, 255, 255);
+    background-color: rgb(165, 17, 17);
+    padding:1px 7.5px;
+    border-radius: 50%;
 }
 .nav-item21 div i{
     padding: 1vw;  
@@ -117,18 +120,7 @@ nav {
     color: white;
     background-color: rgba(255, 255, 255, 0.08);
 }
-.nav-item21 div p{
-    transition: all 750ms ease-in-out;
-    opacity: 0;
-    padding-top: 10px;
-    font-size: .9vw;
-    position: absolute;
-    bottom: -2px;
-}
-.nav-item21 div:hover p{
-    opacity: 1;
-    color: goldenrod;
-}
+
 
 .sliding-images {
     width: 100%;

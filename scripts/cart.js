@@ -1,5 +1,5 @@
 //for cart page javascript code
-function updateCart() {
+export function updateCart() {
     if (localStorage.getItem("chronoCart") && localStorage.getItem("chronoCart") !== "[]") {
         let empty = document.querySelector(".empty");
         let container = document.querySelector(".containerCart");
@@ -50,16 +50,20 @@ function updateCart() {
                 chronoCart.splice(index, 1); // Remove item from array
                 localStorage.setItem("chronoCart", JSON.stringify(chronoCart)); // Update localStorage
                 updateCart(); // Re-render cart
+                let cartCount = document.querySelector(".length")
+
+                cartCount.innerHTML = (localStorage.getItem("chronoCart")) ? JSON.parse(localStorage.getItem("chronoCart")).length : "0";
+
             });
         });
 
         const recipt = document.querySelector(".containerCart .recipt")
         let length = chronoCart.length;
         let rate = 0;
-        chronoCart.forEach((e)=>{
-            rate += parseInt(e.price.split(" ")[0].replace("$",""))
+        chronoCart.forEach((e) => {
+            rate += parseInt(e.price.split(" ")[0].replace("$", ""))
         })
-        let discrate = 0.1*rate;
+        let discrate = 0.1 * rate;
         let totalamt = rate - discrate;
         let str2 = "";
         str2 = `
@@ -112,4 +116,16 @@ function updateCart() {
     }
 }
 
-window.addEventListener("load",updateCart);
+window.addEventListener("load", updateCart);
+window.addEventListener("storage", (event) => {
+    if (event.key === "chronoCart") {
+        console.log("chronoCart updated:", event.newValue);
+        updateCart(); // Re-run the cart update logic
+    }
+});
+
+window.addEventListener("load", () => {
+    let cartCount = document.querySelector(".length")
+
+    cartCount.innerHTML = (localStorage.getItem("chronoCart")) ? JSON.parse(localStorage.getItem("chronoCart")).length : "0";
+})

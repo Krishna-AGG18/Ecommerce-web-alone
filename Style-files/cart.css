@@ -293,6 +293,73 @@ body {
     background-color: #555;
     cursor: grab;
 }
+
+
+.sliding-links {
+    position: fixed;
+    /* Keep it fixed on the screen */
+    top: 0;
+    z-index: 5;
+    right: 0;
+    overflow: hidden;
+    display: flex;
+    height: 100vh;
+    backdrop-filter: blur(20px);
+    width: 50vh;
+    visibility: hidden;
+    /* Initially hidden */
+    opacity: 0;
+    /* Start as fully transparent */
+    transform: translateX(100%);
+    /* Start off-screen to the right */
+    flex-direction: column;
+    gap: 10vh;
+    transition: transform 1s ease-in-out, opacity 0.5s ease-in-out, visibility 0s linear 1s;
+    /* Smooth transition */
+}
+
+.sliding-links-effect {
+    visibility: visible;
+    /* Make it visible */
+    opacity: 1;
+    /* Fully opaque */
+    transform: translateX(0);
+    /* Slide into view */
+    transition: transform 1s ease-in-out, opacity 0.5s ease-in-out;
+    /* Smooth transition */
+}
+
+.sliding-links div div {
+    padding: 20px 0;
+    font-size: 1.5rem;
+    font-weight: bolder;
+}
+
+.profcart div {
+    display: flex;
+    align-items: center;
+}
+
+.sliding-links div div::after {
+    display: block;
+    content: '';
+    border-bottom: solid 3px darkorchid;
+    transform: scaleX(0);
+    transition: transform 550ms ease-in-out;
+}
+
+.sliding-links div {
+    overflow: visible;
+}
+
+.sliding-links div div:hover {
+    color: white;
+}
+
+.sliding-links div div:hover:after {
+    transform: scaleX(1);
+}
+
 @media (max-width:1086px) {
     .containerCart{
         grid-template-areas: 'contcart'
@@ -329,6 +396,9 @@ body {
     }
     .hamburger{
         display: block !important;
+    }
+    .sliding-links{
+        width: 40vh;
     }
 }
 
@@ -375,6 +445,12 @@ body {
     .containerCart .cartItems{
         padding: 1rem 12px;
     }
+    .sliding-links{
+        width: 30vh;
+    }
+    .sliding-links div div {
+        font-size: 1rem;
+    }
 }
 @media (max-width:367px) {
     .empty{
@@ -388,7 +464,11 @@ body {
         font-size: 1.2rem;
     }
 }
-
+@media (max-width:310px) {
+    .sliding-links{
+        width: 25vh;
+    }
+}
 .displayNone{
     display: none !important;
 }

@@ -92,25 +92,33 @@ let content_recomm = [
     }
 ];
 
-let recommended = document.querySelector(".recommended .items");
-let best_seller = document.querySelector(".best-seller-items");
-// let recomm_html = recommended.innerHTML;
-
-var strii = "";
-content_recomm.forEach((card, index) => {
-    strii += `
-    <div class="card">
-    <div class="image">
-    <img src="${card.img}" alt="watch${index + 1}">
-    </div>
-    <div class="info">
-    <div class="name">${card.name}</div>
-    <div class="desc">${card.desc}</div>
-    <div class="rate">${card.rate}  &nbsp;&nbsp;&nbsp;<strike>${card.str}</strike></div>
-    </div>
-    <i class="fa-solid fa-plus addToCart"></i>
-    </div>
-    `
+//content load nhi hora tha isliye ye event listener lagaya mene yaha ok!!
+document.addEventListener("DOMContentLoaded",()=>{
+    let recommended = document.querySelector(".recommended .items");
+    let best_seller = document.querySelector(".best-seller-items");
+    // console.log(best_seller)
+        let strii = ""; // Generate your HTML content here
+        content_recomm.forEach((card, index) => {
+            strii += `
+            <div class="card">
+            <div class="image">
+            <img src="${card.img}" alt="watch${index + 1}">
+            </div>
+            <div class="info">
+            <div class="name">${card.name}</div>
+            <div class="desc">${card.desc}</div>
+            <div class="rate">${card.rate}  &nbsp;&nbsp;&nbsp;<strike>${card.str}</strike></div>
+            </div>
+            <i class="fa-solid fa-plus addToCart"></i>
+            </div>
+            `});
+        // console.log(strii)
+        document.querySelector(".recommended .items").innerHTML = `${strii}`;
+        best_seller.innerHTML = strii;
 });
-best_seller.innerHTML = strii;
-recommended.innerHTML= strii;
+
+let cartCards;
+document.addEventListener("DOMContentLoaded", () => {
+    cartCards = document.querySelectorAll(".recommended .items .card");
+});
+export {cartCards};

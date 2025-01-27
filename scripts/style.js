@@ -12,64 +12,72 @@ setInterval(() => {
 }, 2500);
 
 //for slider-2 recommended ke liye
-let sliderDivs = document.querySelectorAll(".recommended .items .card");
-let left = document.querySelector(".left");
-let right = document.querySelector(".right");
-var counter = 0;
+document.addEventListener("DOMContentLoaded", () => {
+    let sliderDivs = document.querySelectorAll(".recommended .items .card");
+    let left = document.querySelector(".left");
+    let right = document.querySelector(".right");
+    var counter = 0;
 
-sliderDivs.forEach((div, index) => {
-    div.style.left = `${index * 326}px`;
-})
+    // Set initial positions of the cards
+    sliderDivs.forEach((div, index) => {
+        div.style.left = `${index * 326}px`;
+    });
 
-const slideDiv = () => {
-    if (counter < 0) {
-        counter = 0; // Prevent sliding left past the first image
-    } else if (counter > sliderDivs.length - 1) {
-        counter = sliderDivs.length - 1; // Prevent sliding right past the last image
+    const slideDiv = () => {
+        // Prevent sliding past the boundaries
+        if (counter < 0) {
+            counter = 0;
+        } else if (counter > sliderDivs.length - 1) {
+            counter = sliderDivs.length - 1;
+        }
+        // Apply transform to each div based on the counter
+        sliderDivs.forEach(div => {
+            div.style.transform = `translateX(-${counter * 326}px)`;
+        });
+    };
+
+    // Add event listeners for left and right buttons
+    left.addEventListener("click", () => {
+        counter--;
+        slideDiv();
+    });
+
+    right.addEventListener("click", () => {
+        counter++;
+        slideDiv();
+    });
+    //for bestseller
+    let bestsellercards = document.querySelectorAll(".best-seller-items .card")
+    let bestLeft = document.querySelector(".best-left")
+    let bestright = document.querySelector(".best-right")
+    let bestCount = 0
+    
+    bestsellercards.forEach((cards, index) => {
+        cards.style.left = `${index * 326}px`;
+    })
+    
+    const slideCard = () => {
+        if (counter < 0)
+            counter = 0;
+        else if (counter > bestsellercards.length - 1)
+            counter = bestsellercards.length - 1;
+    
+        bestsellercards.forEach((card) => {
+            card.style.transform = `translateX(-${counter * 326}px)`;
+        })
     }
-    sliderDivs.forEach(div => {
-        div.style.transform = `translateX(-${counter * 326}px)`
+    
+    bestLeft.addEventListener("click", () => {
+        counter--;
+        slideCard();
     })
-}
-left.addEventListener("click", () => {
-    counter--;
-    slideDiv();
-})
-right.addEventListener("click", () => {
-    counter++;
-    slideDiv();
-})
-
-//for bestseller
-let bestsellercards = document.querySelectorAll(".best-seller-items .card")
-let bestLeft = document.querySelector(".best-left")
-let bestright = document.querySelector(".best-right")
-let bestCount = 0
-
-bestsellercards.forEach((cards, index) => {
-    cards.style.left = `${index * 326}px`;
-})
-
-const slideCard = () => {
-    if (counter < 0)
-        counter = 0;
-    else if (counter > bestsellercards.length - 1)
-        counter = bestsellercards.length - 1;
-
-    bestsellercards.forEach((card) => {
-        card.style.transform = `translateX(-${counter * 326}px)`;
+    
+    bestright.addEventListener("click", () => {
+        counter++;
+        slideCard();
     })
-}
+});
 
-bestLeft.addEventListener("click", () => {
-    counter--;
-    slideCard();
-})
-
-bestright.addEventListener("click", () => {
-    counter++;
-    slideCard();
-})
 
 //for addtocart button
 let cards = document.querySelectorAll(".card");

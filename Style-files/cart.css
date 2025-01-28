@@ -68,19 +68,19 @@ body {
     align-items: center; */
     position: relative;
 }
-
+.page-links .item6{
+    display: flex;
+}
 .page-links .item6 .length{
     position: absolute !important;
     font-size: 12px;
     color: rgb(255, 255, 255);
-    background-color: rgb(165, 17, 17);
+    background-color: #1b8989;
     padding:1px 7px;
     border-radius: 50%;
     display: flex;
     justify-content: center;
-    align-items: center;
-    bottom: 0;
-    left: 0;
+    align-items: center;    
 }
 .page-links div::after {
     display: block;

@@ -113,20 +113,23 @@ bestSeller.forEach((elem,index)=>{
 });
 brands.innerHTML = str;
 //for addtocart button
-let cards = document.querySelectorAll(".card");
-let addtobtns = document.querySelectorAll(".addToCart");
+document.addEventListener("DOMContentLoaded",()=>{
 
-cards.forEach((card) => {
-    let addtobtn = card.querySelector(".addToCart");
-    card.addEventListener("mouseover", () => {
-        addtobtn.style.opacity = "1";
-        // addtobtn.style.right = "20px";
-        addtobtn.style.bottom = "35px";
-    })
-    card.addEventListener("mouseout", () => {
-        addtobtn.style.opacity = "0";
-        // addtobtn.style.right = "10px";
-        addtobtn.style.bottom = "0px";
+    let cards = document.querySelectorAll(".card");
+    let addtobtns = document.querySelectorAll(".addToCart");
+    
+    cards.forEach((card) => {
+        let addtobtn = card.querySelector(".addToCart");
+        card.addEventListener("mouseover", () => {
+            addtobtn.style.opacity = "1";
+            // addtobtn.style.right = "20px";
+            addtobtn.style.bottom = "35px";
+        })
+        card.addEventListener("mouseout", () => {
+            addtobtn.style.opacity = "0";
+            // addtobtn.style.right = "10px";
+            addtobtn.style.bottom = "0px";
+        })
     })
 })
 

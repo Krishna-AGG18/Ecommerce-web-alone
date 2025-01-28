@@ -6,10 +6,23 @@
 }
 
 body{
-    background: linear-gradient(135deg, #1a1a1a, #333333);
+    background: linear-gradient(360deg, #2e1858 0%, #000000 100%);
     color: white;
+    overflow-x: hidden;
+    height: auto;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
 }
-.navbar{
+nav{
+    /* position: fixed; */
+    position: sticky;
+    top: 0;
+    z-index: 10;
+    width: 100vw;
+    backdrop-filter: blur(5px);
+}
+.navbar {
     display: grid;
     justify-content: space-between;
     align-content: center;
@@ -17,38 +30,145 @@ body{
     font-size: 1.2rem;
     font-weight: 700;
 }
-.navbar-brandname{
+
+.navbar-brandname {
     cursor: pointer;
     color: white;
     transition: all .8s ease-in-out;
     text-align: center;
 }
-.navbar-brandname:hover{
+
+.navbar-brandname:hover {
     color: goldenrod;
 }
-.page-links{
+
+.navbar-brandname::after {
+    display: block;
+    content: '';
+    border: 2px solid whitesmoke;
+    transform: scale(0);
+    transition: transform 550ms ease-in-out;
+}
+
+.navbar-brandname:hover:after {
+    transform: scale(1);
+}
+
+.page-links {
     text-align: center;
     display: flex;
     justify-content: center;
     align-items: center;
     gap: 1.2rem;
-    
+
 }
-.page-links div{
+
+.page-links div {
     color: #aca7a7;
     transition: all .8s ease-in-out;
     cursor: pointer;
 }
-.page-links div::after{
+
+.page-links div::after {
     display: block;
     content: '';
     border-bottom: solid 3px darkorchid;
     transform: scaleX(0);
     transition: transform 550ms ease-in-out;
 }
-.page-links div:hover{
+
+.page-links div:hover {
     color: white;
 }
-.page-links div:hover:after{
+
+.page-links div:hover:after {
     transform: scaleX(1);
+}
+
+.hamburger {
+    display: none !important;
+    z-index: 10;
+}
+
+.sliding-links {
+    position: fixed;
+    /* Keep it fixed on the screen */
+    top: 0;
+    z-index: 5;
+    right: 0;
+    overflow: hidden;
+    display: flex;
+    height: 100vh;
+    backdrop-filter: blur(20px);
+    width: 50vh;
+    visibility: hidden;
+    /* Initially hidden */
+    opacity: 0;
+    /* Start as fully transparent */
+    transform: translateX(100%);
+    /* Start off-screen to the right */
+    flex-direction: column;
+    gap: 10vh;
+    transition: transform 1s ease-in-out, opacity 0.5s ease-in-out, visibility 0s linear 1s;
+    /* Smooth transition */
+}
+
+.sliding-links-effect {
+    visibility: visible;
+    /* Make it visible */
+    opacity: 1;
+    /* Fully opaque */
+    transform: translateX(0);
+    /* Slide into view */
+    transition: transform 1s ease-in-out, opacity 0.5s ease-in-out;
+    /* Smooth transition */
+}
+
+.sliding-links div div {
+    padding: 20px 0;
+    font-size: 1.5rem;
+    font-weight: bolder;
+}
+
+.profcart div {
+    display: flex;
+    align-items: center;
+}
+
+.sliding-links div div::after {
+    display: block;
+    content: '';
+    border-bottom: solid 3px darkorchid;
+    transform: scaleX(0);
+    transition: transform 550ms ease-in-out;
+}
+
+.sliding-links div {
+    overflow: visible;
+}
+
+.sliding-links div div:hover {
+    color: white;
+}
+
+.sliding-links div div:hover:after {
+    transform: scaleX(1);
+}
+
+
+
+
+@media (max-width: 768px) {
+    .page-links {
+        display: none;
+    }
+
+    .hamburger {
+        display: flex !important;
+        align-items: center;
+        padding-bottom: 5px;
+    }
+    .sliding-links{
+        width: 40vh;
+    }
 }

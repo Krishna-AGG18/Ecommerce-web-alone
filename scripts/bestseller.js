@@ -1,4 +1,4 @@
-let bestSeller =[
+export const bestSeller =[
     "https://www.titan.co.in/on/demandware.static/-/Library-Sites-TitanSharedLibrary/default/dwd005b872/images/TitanSBDesktop.jpg",
     "https://www.titan.co.in/on/demandware.static/-/Library-Sites-TitanSharedLibrary/default/dweedae1b7/images/fastrackdesktop.jpg",
     "https://www.titan.co.in/on/demandware.static/-/Library-Sites-TitanSharedLibrary/default/dw72198a2d/images/sonatadesktop.jpg",
@@ -13,11 +13,3 @@ let bestSeller =[
     "https://www.titan.co.in/on/demandware.static/-/Library-Sites-TitanSharedLibrary/default/dwaf60a50a/images/Brand_Nebula_D.jpg"
 ];
 
-let brands = document.querySelector(".shop-brands");
-var str = "";
-bestSeller.forEach((elem,index)=>{
-    str +=`
-        <img src="${elem}" alt="brand${index+1}">
-    `;
-});
-brands.innerHTML = str;

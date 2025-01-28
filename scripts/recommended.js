@@ -1,4 +1,4 @@
-let content_recomm = [
+export const content_recomm = [
     {
         img: "https://i.pinimg.com/736x/53/83/4a/53834a3c28ec290844bedbefd3a5df63.jpg",
         name: "Babylonian II",
@@ -92,33 +92,3 @@ let content_recomm = [
     }
 ];
 
-//content load nhi hora tha isliye ye event listener lagaya mene yaha ok!!
-document.addEventListener("DOMContentLoaded",()=>{
-    let recommended = document.querySelector(".recommended .items");
-    let best_seller = document.querySelector(".best-seller-items");
-    // console.log(best_seller)
-        let strii = ""; // Generate your HTML content here
-        content_recomm.forEach((card, index) => {
-            strii += `
-            <div class="card">
-            <div class="image">
-            <img src="${card.img}" alt="watch${index + 1}">
-            </div>
-            <div class="info">
-            <div class="name">${card.name}</div>
-            <div class="desc">${card.desc}</div>
-            <div class="rate">${card.rate}  &nbsp;&nbsp;&nbsp;<strike>${card.str}</strike></div>
-            </div>
-            <i class="fa-solid fa-plus addToCart"></i>
-            </div>
-            `});
-        // console.log(strii)
-        document.querySelector(".recommended .items").innerHTML = `${strii}`;
-        best_seller.innerHTML = strii;
-});
-
-let cartCards;
-document.addEventListener("DOMContentLoaded", () => {
-    cartCards = document.querySelectorAll(".recommended .items .card");
-});
-export {cartCards};

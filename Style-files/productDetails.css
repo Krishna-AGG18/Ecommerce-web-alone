@@ -156,20 +156,28 @@ nav{
 }
 .cardContainer .image{
     grid-area: image;
-    border: 2px solid red;
     width: 100%;
+    overflow: hidden;
+    border-radius: 8px;
 }
 .cardContainer .image img{
     /* aspect-ratio:; */
     /* width: 100%; */
     height: 80vh;
     object-fit: cover;
+    transition: 500ms all ease-in-out;
+    border-radius: 8px;
+}
+.cardContainer .image img:hover{
+    transform: scale(1.1);
+    cursor: pointer;
 }
 .cardContainer .info{
     grid-area: info;
-    border: 2px solid red;
     width: 100%;
-    padding-block: 1rem;
+    padding: 1rem;
+    border-radius: 8px;
+    background-color: #00000062;
 }
 .cardContainer .info .name{
     font-size: 2rem;
@@ -179,7 +187,35 @@ nav{
     color: yellow;
 }
 .cardContainer .info .rate{
-    
+    font-size: 2rem;
+    color: rgb(51, 245, 51);
+}
+.cardContainer .info .selectbtns{
+    display: flex;
+    gap: 10px;justify-content: center;
+    padding: 1rem 0;
+}
+.cardContainer .info .selectbtns button{
+    padding: .8rem 1.5rem;
+    border: none;
+    width: 50%;
+    background-color: rgb(9, 155, 155);
+}
+.cardContainer .info .avail .avail-text1{
+    padding: 1rem 0;
+}
+.cardContainer .info .avail-icon{
+    display: flex;
+justify-content: center;
+gap: 10px;
+text-align: center;
+    font-size: 12px;
+    padding-block: 1rem;
+}
+.cardContainer .info .avail-icon picture{
+    display: flex;
+    justify-content: center;
+    cursor: pointer;
 }
 .cardContainer{
     display: grid;
@@ -207,5 +243,9 @@ nav{
     .cardContainer{
         grid-template-areas: 'image' 'info';
         grid-template-columns: 100%;
+    }
+    .cardContainer .image img{
+        width: 100%;
+        height: auto;
     }
 }

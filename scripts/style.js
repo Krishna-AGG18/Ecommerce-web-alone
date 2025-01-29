@@ -22,6 +22,7 @@ document.addEventListener("DOMContentLoaded",()=>{
         content_recomm.forEach((card, index) => {
             strii += `
             <div class="card">
+            <a href="productDetails.html" style="height: 100%;">
             <div class="image">
             <img src="${card.img}" alt="watch${index + 1}">
             </div>
@@ -29,7 +30,7 @@ document.addEventListener("DOMContentLoaded",()=>{
             <div class="name">${card.name}</div>
             <div class="desc">${card.desc}</div>
             <div class="rate">${card.rate}  &nbsp;&nbsp;&nbsp;<strike>${card.str}</strike></div>
-            </div>
+            </div></a>
             <i class="fa-solid fa-plus addToCart"></i>
             </div>
             `});

@@ -154,8 +154,41 @@ nav{
 .sliding-links div div:hover:after {
     transform: scaleX(1);
 }
-
-
+.cardContainer .image{
+    grid-area: image;
+    border: 2px solid red;
+    width: 100%;
+}
+.cardContainer .image img{
+    /* aspect-ratio:; */
+    /* width: 100%; */
+    height: 80vh;
+    object-fit: cover;
+}
+.cardContainer .info{
+    grid-area: info;
+    border: 2px solid red;
+    width: 100%;
+    padding-block: 1rem;
+}
+.cardContainer .info .name{
+    font-size: 2rem;
+    font-weight: bold;
+}
+.cardContainer .info .rating{
+    color: yellow;
+}
+.cardContainer .info .rate{
+    
+}
+.cardContainer{
+    display: grid;
+    grid-template-columns: auto 48%;
+    justify-content: center;
+    gap: 1rem;
+    grid-template-areas: 'image info';
+    padding: .5rem 2rem;
+}
 
 
 @media (max-width: 768px) {
@@ -170,5 +203,9 @@ nav{
     }
     .sliding-links{
         width: 40vh;
+    }
+    .cardContainer{
+        grid-template-areas: 'image' 'info';
+        grid-template-columns: 100%;
     }
 }

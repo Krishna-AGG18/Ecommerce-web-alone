@@ -178,7 +178,6 @@ document.addEventListener("DOMContentLoaded", () => {
                     name : item.querySelector(".info .name").innerHTML,
                     desc : item.querySelector(".info .desc").innerHTML,
                     price : item.querySelector(".info .rate").innerHTML,
-                    desc : item.querySelector(".info .desc").innerHTML,
                     rating : '★★★★☆'
                 }
                 cardclickedArr.push(cardClickedItem);

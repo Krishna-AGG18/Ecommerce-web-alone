@@ -90,6 +90,26 @@ nav{
     z-index: 10;
 }
 
+.page-links .item6{
+    display: flex;
+    position: relative;
+}
+.page-links .item6 .length{
+    position: relative;
+    font-size: 12px;
+    color: rgb(255, 255, 255);
+    background-color: #1b8989;
+    padding:1px 7px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;    
+    right:5px ;
+}
+.page-links .item6 a{
+    position: relative;
+    display: flex;
+}
 .sliding-links {
     position: fixed;
     /* Keep it fixed on the screen */
@@ -247,5 +267,17 @@ text-align: center;
     .cardContainer .image img{
         width: 100%;
         height: auto;
+    }
+}
+
+@media (max-width:556px) {
+    .cardContainer{
+        padding: .5rem;
+    }
+}
+
+@media (max-width:350px) {
+    .avail-icon figcaption{
+        font-size: 10px;
     }
 }

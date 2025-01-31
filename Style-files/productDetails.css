@@ -280,4 +280,7 @@ text-align: center;
     .avail-icon figcaption{
         font-size: 10px;
     }
+    .cardContainer{
+        padding: .5rem;
+    }
 }
